@@ -1,0 +1,22 @@
+@model Book
+@{
+    ViewData["Title"] = "Редагування: " + Model.Title;
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bw-breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index">Каталог</a></li>
+        <li class="breadcrumb-item"><a asp-action="Details" asp-route-id="@Model.Id">@Model.Title</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Редагування</li>
+    </ol>
+</nav>
+
+<h1 class="bw-title">Редагування книги</h1>
+<p class="bw-subtitle">Змініть потрібні поля та збережіть</p>
+
+<partial name="_BookForm" model="Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/book-form.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,15 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Помилка";
+}
+
+<div class="bw-message-page">
+    <img src="~/img/alata.jpg" alt="" width="120" height="120" class="rounded-circle mb-3" style="object-fit: cover; box-shadow: 0 0 0 6px var(--bw-sand)" />
+    <h1 class="h3">Щось пішло не так</h1>
+    <p class="text-secondary">Під час обробки запиту сталася помилка. Спробуйте оновити сторінку або повернутися пізніше.</p>
+    @if (Model.ShowRequestId)
+    {
+        <p class="small text-secondary">Код запиту: <code>@Model.RequestId</code></p>
+    }
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">На головну</a>
+</div>

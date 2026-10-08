@@ -1,0 +1,5 @@
+/* Стилі шапки та футера винесено у wwwroot/css/site.css (фірмовий стиль BookWings). */
+
+a.navbar-brand {
+  white-space: normal;
+}
